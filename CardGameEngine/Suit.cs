@@ -4,7 +4,7 @@ namespace CardGameEngine
     public enum Suit
     {
         Clubs,
-        Damonds,
+        Diamonds,
         Hearts,
         Spades
     }
