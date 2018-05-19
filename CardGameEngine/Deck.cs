@@ -8,7 +8,7 @@ namespace CardGameEngine
     /// </summary>
     public class Deck : IGameDeck
     {
-        private static Random rng = new Random();
+        private static Random shuffleRandom = new Random();
         private IList<ICard> _deck { get; } = new List<ICard>();
 
         public Deck(bool withJokers = true)
@@ -38,7 +38,7 @@ namespace CardGameEngine
             while (n > 1)
             {
                 n--;
-                int k = rng.Next(n + 1);
+                int k = shuffleRandom.Next(n + 1);
                 ICard value = this[k];
                 this[k] = this[n];
                 this[n] = value;
